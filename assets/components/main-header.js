@@ -98,7 +98,7 @@ class Header extends HTMLElement {
                   <div class="p-1">
                     <li>
                       <a href="/account-settings" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
-                        个人信息
+                        账号
                       </a>
                     </li>
                     <li>
