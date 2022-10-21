@@ -34,7 +34,7 @@ class Header extends HTMLElement {
             <a href="/host.html" class="text-sm font-bold hidden md:inline hover:text-gray-700 transition duration-200">
               发布房源
             </a>
-            <div class="relative inline-block text-left dropdown">
+            <div class="relative inline-block text-left">
               <div>
                 <button id="dropdownBtn" class="inline-flex w-full justify-center rounded-full bg-blue-500 px-2 py-2 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 transition duration-200">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.5" stroke="currentColor" class="mb-1 mr-1 h-5 w-5 text-slate-200 hover:text-slate-100">
@@ -58,23 +58,13 @@ class Header extends HTMLElement {
                   </div>
                   <div class="p-1">
                     <li>
-                      <a href="/account-settings" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
-                        账号
+                      <a href="/login.html" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
+                        登录
                       </a>
                     </li>
                     <li>
-                      <a href="/history" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
-                        历史订单
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/guest/inbox.html" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
-                        通知
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
-                        退出
+                      <a href="/register.html" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
+                        注册
                       </a>
                     </li>
                   </div>
@@ -88,4 +78,4 @@ class Header extends HTMLElement {
   }
 }
 
-customElements.define('main-header', Header);
+customElements.define('header-before-login', Header);
