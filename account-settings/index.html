@@ -9,12 +9,12 @@
   <link rel="shortcut icon" href="/assets/images/global/logos/primary-logo.svg">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="/assets/js/dropdown-menu.js"></script>
-  <script src="/assets/components/main-header.js"></script>
+  <script src="/assets/components/header-without-search-bar.js"></script>
   <script src="/assets/components/main-footer.js"></script>
 </head>
 <body>
   <!-- Header -->
-  <main-header />
+  <header-without-search-bar />
 
   <!-- Main -->
   <div>
@@ -22,6 +22,9 @@
       <h2 class="text-4xl font-bold text-gray-900">账号</h2>
       <h4 class="mt-2 text-lg font-regular text-gray-900">
         戴博
+        <a href="/users/show/user-id.html" class="font-bold underline underline-offset-4">
+          查看我的资料
+        </a>
       </h4>
   
       <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
