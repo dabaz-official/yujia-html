@@ -52,7 +52,7 @@ class Header extends HTMLElement {
                       </a>
                     </li>
                     <li>
-                      <a href="/account-settings/history" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
+                      <a href="/account-settings/history.html" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
                         历史订单
                       </a>
                     </li>
