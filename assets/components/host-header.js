@@ -11,33 +11,18 @@ class Header extends HTMLElement {
           />
         </a>
 
-        <!-- Middle -->
-        <div class="flex items-center md:border-2 rounded-full py-2 md:shadow-sm md:hover:shadow-md transition duration-200">
-          <input 
-            class="flex-grow pl-5 outline-none bg-transparent text-sm text-gray-600 placeholder-gray-400" 
-            type="text" 
-            placeholder="搜索房源" 
-          />
-          <button type="submit">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-6 h-6 hidden md:inline-flex text-blue-500 mx-auto mr-5">
-              <path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z" clip-rule="evenodd" />
-            </svg>
-          </button>
-        </div>
+        <div class="flex-1"></div>
 
         <!-- Right -->
         <div class="flex items-center justify-end">
           <div class="inline w-56 text-right space-x-4 text-gray-500">
-            <a href="/rent" class="text-sm font-bold hidden md:inline hover:text-gray-700 transition duration-200">
-              租房
-            </a>
-            <a href="/host" class="text-sm font-bold hidden md:inline hover:text-gray-700 transition duration-200">
+            <a href="/host/become-a-host.html" class="text-sm font-bold hidden md:inline hover:text-gray-700 transition duration-200">
               发布房源
             </a>
             <div class="relative inline-block text-left dropdown">
-              <div>
-                <button id="dropdownBtn" class="inline-flex w-full justify-center rounded-full bg-blue-500 px-2 py-2 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 transition duration-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.5" stroke="currentColor" class="mb-1 mr-1 h-5 w-5 text-slate-200 hover:text-slate-100">
+              <div class="group">
+                <button id="dropdownBtn" class="inline-flex w-full justify-center rounded-md border-2 px-2 py-2 text-sm font-medium text-white group-hover:bg-blue-600 active:ring-2 active:ring-blue-500 active:ring-opacity-75 transition duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.5" stroke="currentColor" class="mb-1 mr-1 h-5 w-5 text-slate-800 group-hover:text-slate-100">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                   </svg>
                 </button>
@@ -46,29 +31,24 @@ class Header extends HTMLElement {
                 <ul>
                   <div class="p-1">
                     <li>
-                      <a href="/rent" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
-                        租房
-                      </a>
-                    </li>
-                    <li>
-                      <a href="/host" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
+                      <a href="/host/become-a-host.html" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
                         发布房源
                       </a>
                     </li>
                   </div>
                   <div class="p-1">
                     <li>
-                      <a href="/account-settings" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
-                        账号
+                      <a href="/host/dashboard" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
+                        控制台
                       </a>
                     </li>
                     <li>
-                      <a href="/account-settings/history.html" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
-                        历史订单
+                      <a href="/host/dashboard/manage-your-homes.html" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
+                        管理房源
                       </a>
                     </li>
                     <li>
-                      <a href="/account-settings/inbox.html" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
+                      <a href="/host/dashboard/inbox.html" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
                         通知
                       </a>
                     </li>
@@ -88,4 +68,4 @@ class Header extends HTMLElement {
   }
 }
 
-customElements.define('main-header', Header);
+customElements.define('host-header', Header);

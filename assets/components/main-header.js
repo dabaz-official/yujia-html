@@ -12,7 +12,7 @@ class Header extends HTMLElement {
         </a>
 
         <!-- Middle -->
-        <div class="flex items-center md:border-2 rounded-full py-2 md:shadow-sm md:hover:shadow-md transition duration-200">
+        <div class="flex items-center md:border-2 rounded-md py-2 md:shadow-sm md:hover:shadow-md transition duration-200">
           <input 
             class="flex-grow pl-5 outline-none bg-transparent text-sm text-gray-600 placeholder-gray-400" 
             type="text" 
@@ -35,9 +35,9 @@ class Header extends HTMLElement {
               发布房源
             </a>
             <div class="relative inline-block text-left dropdown">
-              <div>
-                <button id="dropdownBtn" class="inline-flex w-full justify-center rounded-full bg-blue-500 px-2 py-2 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 transition duration-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.5" stroke="currentColor" class="mb-1 mr-1 h-5 w-5 text-slate-200 hover:text-slate-100">
+              <div class="group">
+                <button id="dropdownBtn" class="inline-flex w-full justify-center rounded-md border-2 px-2 py-2 text-sm font-medium text-white group-hover:bg-blue-600 active:ring-2 active:ring-blue-500 active:ring-opacity-75 transition duration-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-width="1.5" stroke="currentColor" class="mb-1 mr-1 h-5 w-5 text-slate-800 group-hover:text-slate-100">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                   </svg>
                 </button>
