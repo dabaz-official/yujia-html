@@ -7,8 +7,8 @@
   <title>个人信息 - 予家</title>
   <link rel="stylesheet" href="/assets/css/font.css">
   <link rel="shortcut icon" href="/assets/images/global/logos/primary-logo.svg">
-  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
-  <script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--<script>
     module.exports = {
       theme: {
         extend: {},
@@ -17,11 +17,11 @@
         require('@tailwindcss/forms'),
       ],
     }
-  </script>
+  </script>-->
   <script src="/assets/js/dropdown-menu.js"></script>
   <script src="/assets/components/header-without-search-bar.js"></script>
   <script src="/assets/components/main-footer.js"></script>
-  <script src="/assets/components/edit-button.js"></script>
+  <script src="https://kit.fontawesome.com/1b0ccbc99f.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header-without-search-bar />
@@ -54,7 +54,7 @@
     </div>
     <form>
       <div class="space-y-6">
-        <ul>
+        <ul class="editable-info">
           <li class="mt-4 border-b">
             <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
             <div class="flex">
@@ -62,20 +62,15 @@
                 戴博
               </p>
               <div class="flex-1"></div>
-              <button class="font-bold justify-end text-gray-800 underline underline-offset-2">
-                修改
-              </button>
             </div>
           </li>
 
           <li class="mt-4 border-b">
             <label for="school" class="block text-sm font-medium text-gray-700">毕业院校</label>
             <div class="mt-1 flex">
-              <p class="py-1">
-                Lakeshore Public High School
-              </p>
+              <input type="text" class="py-1 outline-none focus:outline-none focus-within:outline-none active:outline-none max-w-xl editable" value="Lakeshore Public High School" readonly />
               <div class="flex-1"></div>
-              <button class="font-bold justify-end text-gray-800 underline underline-offset-2">
+              <button type="submit" class="font-bold justify-end text-gray-800 underline underline-offset-2 hover:text-blue-600 transition duration-200 edit-btn">
                 修改
               </button>
             </div>
@@ -84,31 +79,27 @@
           <li class="mt-4 border-b">
             <label for="address" class="block text-sm font-medium text-gray-700">工作地址</label>
             <div class="mt-1 flex">
-              <p class="py-1">
-                北京市海淀区
-              </p>
+              <input type="text" class="py-1 outline-none focus:outline-none focus-within:outline-none active:outline-none max-w-xl editable" value="北京市海淀区" readonly />
               <div class="flex-1"></div>
-              <button class="font-bold justify-end text-gray-800 underline underline-offset-2">
+              <button type="submit" class="font-bold justify-end text-gray-800 underline underline-offset-2 hover:text-blue-600 transition duration-200 edit-btn">
                 修改
               </button>
             </div>
           </li>
 
           <li class="mt-4 border-b">
-            <label for="religion" class="block text-sm font-medium text-gray-700">籍贯</label>
+            <label for="native-place" class="block text-sm font-medium text-gray-700">籍贯</label>
             <div class="mt-1 flex">
-              <p class="py-1">
-                Detroit, Michigan
-              </p>
+              <input type="text" class="py-1 outline-none focus:outline-none focus-within:outline-none active:outline-none max-w-xl editable" value="Detroit, Michigan" readonly />
               <div class="flex-1"></div>
-              <button class="font-bold justify-end text-gray-800 underline underline-offset-2">
+              <button type="submit" class="font-bold justify-end text-gray-800 underline underline-offset-2 hover:text-blue-600 transition duration-200 edit-btn">
                 修改
               </button>
             </div>
           </li>
 
           <li class="mt-4 border-b">
-            <label for="religion" class="block text-sm font-medium text-gray-700">手机号</label>
+            <label for="phone" class="block text-sm font-medium text-gray-700">手机号</label>
             <div class="mt-1 flex">
               <p class="py-1">
                 16666666666
