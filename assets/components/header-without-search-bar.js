@@ -20,7 +20,7 @@ class Header extends HTMLElement {
             <a href="/rent" class="text-sm font-bold hidden md:inline hover:text-gray-700 transition duration-200">
               租房
             </a>
-            <a href="/host.html" class="text-sm font-bold hidden md:inline hover:text-gray-700 transition duration-200">
+            <a href="/host" class="text-sm font-bold hidden md:inline hover:text-gray-700 transition duration-200">
               发布房源
             </a>
             <div class="relative inline-block text-left dropdown">
@@ -40,7 +40,7 @@ class Header extends HTMLElement {
                       </a>
                     </li>
                     <li>
-                      <a href="/host.html" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
+                      <a href="/host" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
                         发布房源
                       </a>
                     </li>
