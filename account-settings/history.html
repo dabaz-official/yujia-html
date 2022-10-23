@@ -7,13 +7,14 @@
   <title>历史订单 - 予家</title>
   <link rel="stylesheet" href="/assets/css/font.css">
   <link rel="shortcut icon" href="/assets/images/global/logos/primary-logo.svg">
-  <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,aspect-ratio"></script>
   <script>
     module.exports = {
       theme: {
         extend: {},
       },
       plugins: [
+        require('@tailwindcss/forms'),
         require('@tailwindcss/aspect-ratio'),
       ],
     }
@@ -22,6 +23,7 @@
   <script src="/assets/js/dropdown-menu.js"></script>
   <script src="/assets/components/header-without-search-bar.js"></script>
   <script src="/assets/components/main-footer.js"></script>
+  <script src="/assets/js/edit.js"></script>
 </head>
 <body class="flex flex-col">
   <!-- Header -->
@@ -54,30 +56,58 @@
       <p class="mt-2 text-sm text-gray-500">查看历史订单的状态</p>
     </div>
 
-    <div class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
+    <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
       <div class="group relative">
-        <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden">
-          <img src="/assets/images/rooms/40067073/01.webp" alt="Beautiful Ocean-Block Home" class="object-center object-cover">
-        </div>
-        <h3 class="mt-4 text-sm text-gray-500">
-          <span class="absolute inset-0"></span>
-          Beautiful Ocean-Block Home
-        </h3>
+        <a href="/rent/rooms/40067073.html">
+          <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden">
+            <img src="/assets/images/rooms/40067073/01.webp" alt="Beautiful Ocean-Block Home" class="object-center object-cover">
+          </div>
+          <h3 class="mt-4 text-sm text-gray-500">
+            <span class="absolute inset-0"></span>
+            Beautiful Ocean-Block Home
+          </h3>
+        </a>
         <p class="mt-1 text-lg font-medium">
           <span class="text-blue-600">未到期</span>
         </p>
         <p class="mt-1 text-md font-medium">
           <span class="text-gray-500">2022年10月20日开始</span>
         </p>
-        <div class="flex mt-1 gap-x-2">
-          <a href="/rent/rooms/40067073.html" class="text-base text-blue-500 hover:text-blue-600">
-            查看房源
-          </a>
-          <a href="/rent/rooms/40067073.html" class="text-base text-blue-500 hover:text-blue-600">
+        <div class="mt-1">
+          <p class="text-base text-blue-500 hover:text-blue-600">
             评价房源
-          </a>
+          </p>
+          <form action="submit" class="relative mt-1 sm:mt-2">
+            <div class="border border-gray-300 rounded-lg shadow-sm overflow-hidden focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500">
+              <label for="title" class="sr-only">标题</label>
+              <input type="text" name="title" id="title" class="block w-full border-0 pt-2.5 text-lg font-medium placeholder-gray-500 focus:ring-0" placeholder="标题">
+              <label for="description" class="sr-only">描述</label>
+              <textarea rows="2" name="description" id="description" class="block w-full border-0 py-0 resize-none placeholder-gray-500 focus:ring-0 sm:text-sm px-3" placeholder="可以写你住房的感受等等..."></textarea>
+          
+              <div aria-hidden="true">
+                <div class="py-2">
+                  <div class="h-9"></div>
+                </div>
+                <div class="h-px"></div>
+                <div class="py-2">
+                  <div class="py-px">
+                    <div class="h-9"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="absolute bottom-0 inset-x-px">
+              <div class="border-t border-gray-200 px-2 py-2 flex justify-between items-center space-x-3 sm:px-3">
+                <div class="flex-shrink-0 justify-between">
+                  <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">评论</button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
+      
 
       <div class="group relative">
         <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden">
@@ -93,13 +123,38 @@
         <p class="mt-1 text-md font-medium">
           <span class="text-gray-500">2022年9月15日开始</span>
         </p>
-        <div class="flex mt-1 gap-x-2">
-          <a href="/rent/rooms/42117045.html" class="text-base text-blue-500 hover:text-blue-600">
-            查看房源
-          </a>
-          <a href="/rent/rooms/42117045.html" class="text-base text-blue-500 hover:text-blue-600">
+        <div class="mt-1">
+          <p class="text-base text-blue-500 hover:text-blue-600">
             评价房源
-          </a>
+          </p>
+          <form action="submit" class="relative mt-1 sm:mt-2">
+            <div class="border border-gray-300 rounded-lg shadow-sm overflow-hidden focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500">
+              <label for="title" class="sr-only">标题</label>
+              <input type="text" name="title" id="title" class="block w-full border-0 pt-2.5 text-lg font-medium placeholder-gray-500 focus:ring-0" placeholder="标题">
+              <label for="description" class="sr-only">描述</label>
+              <textarea rows="2" name="description" id="description" class="block w-full border-0 py-0 resize-none placeholder-gray-500 focus:ring-0 sm:text-sm px-3" placeholder="可以写你住房的感受等等..."></textarea>
+          
+              <div aria-hidden="true">
+                <div class="py-2">
+                  <div class="h-9"></div>
+                </div>
+                <div class="h-px"></div>
+                <div class="py-2">
+                  <div class="py-px">
+                    <div class="h-9"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="absolute bottom-0 inset-x-px">
+              <div class="border-t border-gray-200 px-2 py-2 flex justify-between items-center space-x-3 sm:px-3">
+                <div class="flex-shrink-0 justify-between">
+                  <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">评论</button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
 
@@ -117,13 +172,38 @@
         <p class="mt-1 text-md font-medium">
           <span class="text-gray-500">未开始</span>
         </p>
-        <div class="flex mt-1 gap-x-2">
-          <a href="/rent/rooms/13923374.html" class="text-base text-blue-500 hover:text-blue-600">
-            查看房源
-          </a>
-          <a href="/rent/rooms/13923374.html" class="text-base text-blue-500 hover:text-blue-600">
+        <div class="mt-1">
+          <p class="text-base text-blue-500 hover:text-blue-600">
             评价房源
-          </a>
+          </p>
+          <form action="submit" class="relative mt-1 sm:mt-2">
+            <div class="border border-gray-300 rounded-lg shadow-sm overflow-hidden focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500">
+              <label for="title" class="sr-only">标题</label>
+              <input type="text" name="title" id="title" class="block w-full border-0 pt-2.5 text-lg font-medium placeholder-gray-500 focus:ring-0" placeholder="标题">
+              <label for="description" class="sr-only">描述</label>
+              <textarea rows="2" name="description" id="description" class="block w-full border-0 py-0 resize-none placeholder-gray-500 focus:ring-0 sm:text-sm px-3" placeholder="可以写你住房的感受等等..."></textarea>
+          
+              <div aria-hidden="true">
+                <div class="py-2">
+                  <div class="h-9"></div>
+                </div>
+                <div class="h-px"></div>
+                <div class="py-2">
+                  <div class="py-px">
+                    <div class="h-9"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div class="absolute bottom-0 inset-x-px">
+              <div class="border-t border-gray-200 px-2 py-2 flex justify-between items-center space-x-3 sm:px-3">
+                <div class="flex-shrink-0 justify-between">
+                  <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-200">评论</button>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
