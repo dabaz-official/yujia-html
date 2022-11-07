@@ -31,46 +31,12 @@
             />
           </div>
           <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
-            <h3>Beautiful Ocean-Block Home</h3>
-            <p>71,731 元 / 月</p>
+            <h3>{house.name}</h3>
+            <p>{house.price} 元 / 月</p>
           </div>
           <div class="mt-1 flex items-center jusifty-between">
-            <p class="text-sm text-gray-500">Sussex, Delaware</p> 
-            <p class="text-sm text-gray-500 ml-2">整租 5室4卫</p>
-          </div>
-        </a>
-        <a href="/rent/rooms/42117045.html" class="group">
-          <div class="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden sm:aspect-w-3 sm:aspect-h-2">
-            <img
-              src="/assets/images/rooms/42117045/01.webp"
-              alt="Scotland Beach Retreat"
-              class="w-full h-full object-center object-cover group-hover:opacity-75 transition duration-200"
-            />
-          </div>
-          <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
-            <h3>Scotland Beach Retreat</h3>
-            <p>29,788 元 / 月</p>
-          </div>
-          <div class="mt-1 flex items-center jusifty-between">
-            <p class="text-sm text-gray-500">Ridge, Maryland</p> 
-            <p class="text-sm text-gray-500 ml-2">整租 4室4卫</p>
-          </div>
-        </a>
-        <a href="/rent/rooms/13923374.html" class="group">
-          <div class="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden sm:aspect-w-3 sm:aspect-h-2">
-            <img
-              src="/assets/images/rooms/13923374/01.webp"
-              alt="Chester Riverfront"
-              class="w-full h-full object-center object-cover group-hover:opacity-75 transition duration-200"
-            />
-          </div>
-          <div class="mt-4 flex items-center justify-between text-base font-medium text-gray-900">
-            <h3>Chester Riverfront</h3>
-            <p>12,038 元 / 月</p>
-          </div>
-          <div class="mt-1 flex items-center jusifty-between">
-            <p class="text-sm text-gray-500">Kent Narrows, Maryland</p> 
-            <p class="text-sm text-gray-500 ml-2">整租 2室2卫</p>
+            <p class="text-sm text-gray-500">{house.location}</p> 
+            <p class="text-sm text-gray-500 ml-2">{house.bedroomNumber}室{house.bathroomNumber}卫</p>
           </div>
         </a>
       </div>

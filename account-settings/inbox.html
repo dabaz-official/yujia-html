@@ -11,6 +11,24 @@
   <script src="/assets/js/dropdown-menu.js"></script>
   <script src="/assets/components/header-without-search-bar.js"></script>
   <script src="/assets/components/main-footer.js"></script>
+  <style type="text/css">
+    .active { display: block; }
+    [data-tab-info] { display: none; }
+  </style>
+  <script type="text/javascript">
+    const tabs = document.querySelectorAll('[data-tab-value]')
+    const tabInfos = document.querySelectorAll('[data-tab-info]')
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.tabValue);
+        tabInfos.forEach(tabInfos => {
+          tabInfos.classList.remove('active')
+        })
+        target.classList.add('active');
+      })
+    })
+  </script>
 </head>
 <body class="flex flex-col">
   <!-- Header -->
@@ -43,7 +61,7 @@
         通知
       </h2>
       <div class="overflow-y-auto">
-        <a href="#" class="block px-6 pt-3 pb-4 bg-white hover:bg-gray-100 transition duration-200">
+        <span data-tab-value="#tab_1" class="block px-6 pt-3 pb-4 bg-white hover:bg-gray-100 transition duration-200">
           <div class="flex justify-between">
             <span class="text-sm font-semibold text-gray-900">
               予家官方
@@ -55,8 +73,8 @@
           <p class="mt-2 text-sm text-gray-600 truncate">
             戴博申请与您绑定账号，请点击此信息以确认。
           </p>
-        </a>
-        <a href="#" class="block px-6 pt-3 pb-4 bg-white hover:bg-gray-50 transition duration-200">
+        </span>
+        <span data-tab-value="#tab_2" class="block px-6 pt-3 pb-4 bg-white hover:bg-gray-50 transition duration-200">
           <div class="flex justify-between">
             <span class="text-sm font-semibold text-gray-900">
               予家官方
@@ -68,10 +86,10 @@
           <p class="mt-2 text-sm text-gray-600 truncate">
             欢迎您加入予家。我们是一家老共青租房平台，致力于为空巢老人和刚毕业的青年提供价格实惠的优质房源。
           </p>
-        </a>
+        </span>
       </div>
     </div>
-    <div class="flex-1 w-0 bg-gray-100">
+    <div class="flex-1 w-0 bg-gray-100 block" id="tab_1" data-tab-info>
       <div class="shadow-sm">
         <div class="flex items-center justify-between px-5 py-4 bg-white">
           <h3 class="text-xl text-gray-900">
@@ -91,6 +109,54 @@
             </p>
             <p class="mt-6">
               姓名：戴博
+              <br>
+              毕业院校：Lakeshore Public High School
+              <br>
+              工作地址：北京市海淀区
+              <br>
+              籍贯：Detroit, Michigan
+            </p>
+            <p class="mt-6 font-bold">
+              是否同意取决于您，请在确认他的身份后决定是否同意。
+            </p>
+          </div>
+          <div class="mt-6 flex gap-x-4">
+            <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 transition duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="-ml-1 mr-3 mb-1 h-5 w-5 hidden md:flex" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>              
+              同意
+            </button>
+            <button type="button" class="inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-400 transition duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" class="-ml-1 mr-3 mb-1 h-5 w-5 hidden md:flex" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>              
+              拒绝
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="flex-1 w-0 bg-gray-100 hidden" id="tab_2" data-tab-info>
+      <div class="shadow-sm">
+        <div class="flex items-center justify-between px-5 py-4 bg-white">
+          <h3 class="text-xl text-gray-900">
+            予家官方
+          </h3>
+          <div class="ml-4 flex-shrink-0">
+            <span>1天前</span>
+            <span class="ml-4 text-sm font-semibold text-red-900 bg-red-200 rounded-full leading-none px-2 py-1">未处理</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-3">
+        <article class="px-10 py-6 bg-white rounded-lg shadow">
+          <div class="mt-6 text-gray-800 text-md">
+            <p>
+              DabAZ申请与您绑定账号，其信息如下：
+            </p>
+            <p class="mt-6">
+              姓名：DabAZ
               <br>
               毕业院校：Lakeshore Public High School
               <br>
