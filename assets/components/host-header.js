@@ -43,7 +43,7 @@ class Header extends HTMLElement {
                       </a>
                     </li>
                     <li>
-                      <a href="/host/dashboard/manage-your-homes.html" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
+                      <a href="/host/dashboard/manage-your-homes" class="text-gray-900 group flex w-full items-center rounded-md px-2 py-2 text-sm hover:bg-blue-500 hover:text-white transition duration-200">
                         管理房源
                       </a>
                     </li>

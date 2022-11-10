@@ -53,7 +53,7 @@
         <h2 id="category-heading" class="text-2xl font-extrabold tracking-tight text-gray-900">
           按照类型挑选
         </h2>
-        <a href="#" class="hidden text-sm font-semibold text-blue-600 hover:text-blue-500 sm:block transition duration-200">
+        <a href="/rent/" class="hidden text-sm font-semibold text-blue-600 hover:text-blue-500 sm:block transition duration-200">
           浏览所有房源<span aria-hidden="true"> &rarr;</span>
         </a>
       </div>
@@ -209,7 +209,7 @@
       </p>
 
       <div class="mt-10 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8">
-        <a href="/rent/rooms/40067073.html" class="group block">
+        <a href={house.href} class="group block">
           <div
             aria-hidden="true"
             class="aspect-w-3 aspect-h-2 rounded-lg overflow-hidden group-hover:opacity-75 lg:aspect-w-5 lg:aspect-h-6 transition duration-200"
@@ -219,10 +219,11 @@
               alt="Beautiful Ocean-Block Home"
               class="w-full h-full object-center object-cover"
             />
+            <!-- src={imageSrc} alt={imageAlt} or alt={house.name} -->
           </div>
-          <h3 class="mt-4 text-base font-semibold text-gray-900">Beautiful Ocean-Block Home</h3>
+          <h3 class="mt-4 text-base font-semibold text-gray-900">{house.name}</h3>
           <p class="mt-2 text-sm text-gray-500">
-            71,731 元 / 月 Sussex, Delaware
+            {house.price} 元 / 月 {house.location}
           </p>
         </a>
         <a href="/rent/rooms/42117045.html" class="group block">
