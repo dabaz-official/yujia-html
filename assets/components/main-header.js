@@ -14,7 +14,7 @@ class Header extends HTMLElement {
         <!-- Middle -->
         <div class="flex items-center md:border-2 rounded-md py-2 md:shadow-sm md:hover:shadow-md transition duration-200">
           <input 
-            class="flex-grow pl-5 outline-none bg-transparent text-sm text-gray-600 placeholder-gray-400" 
+            class="flex-grow pl-5 outline-none bg-transparent text-sm text-gray-600 placeholder-gray-400 border-none active:border-none focus:border-none focus-within:border-none" 
             type="text" 
             placeholder="搜索房源" 
           />
